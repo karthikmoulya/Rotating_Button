@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 225px 0px 450px 200px;
+    background-color: #1111;
+    perspective: 800px;
+}
+
+.btn{
+    position: relative;
+    height: 150px;
+    width: 450px;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+    transform: translatez(-75px);
+}
+
+.btn:hover{
+    transform: rotatex(-90deg) translatey(75px);
+}
+
+.side{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+.default-side{
+    background-color: white;
+    color: #069;
+    border: 10px solid #069;
+    transform: translatez(75px);
+}
+
+.hover-side{
+    background-color: #069;
+    color: white;
+    transform: rotatex(90deg) translatez(75px);
+}
